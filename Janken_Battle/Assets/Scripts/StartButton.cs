@@ -1,10 +1,12 @@
 using UnityEngine;
-using DG.Tweening;
 using UnityEngine.EventSystems;
+using DG.Tweening;
+using Unity.VisualScripting;
 
-public class CreditButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler
+public class StartButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler
 {
     public System.Action OnClick;
+    [SerializeField] private GameObject fadeManager;
     [SerializeField] private CanvasGroup canvasGroup;
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -20,5 +22,7 @@ public class CreditButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHan
         transform.DOScale(1.0f, 0.24f).SetEase(Ease.OutCubic);
         canvasGroup.DOFade(1.0f, 0.24f).SetEase(Ease.OutCubic);
         SEManager.Instance.PlaySE("push");
+        fadeManager.SetActive(true);
+        FadeManager.Instance.FadeOut(3f);
     }
 }
