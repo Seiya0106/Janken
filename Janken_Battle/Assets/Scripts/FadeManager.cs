@@ -1,24 +1,21 @@
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FadeManager : MonoBehaviour
 {
     public static FadeManager Instance { get; private set; }
     [SerializeField] private CanvasGroup canvasGroup;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-        this.gameObject.SetActive(false);
     }
     public void FadeIn(float duration)
     {
