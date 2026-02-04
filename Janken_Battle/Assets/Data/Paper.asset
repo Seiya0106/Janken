@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b46044838309489a8eff40de20ca5f4, type: 3}
   m_Name: Paper
   m_EditorClassIdentifier: 
-  cardType: 0
+  cardType: 1
   specialEffect: 0
-  power: 0
+  power: 1

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Rock_life
   m_EditorClassIdentifier: 
   cardType: 0
-  specialEffect: 0
-  power: 0
+  specialEffect: 1
+  power: 1
