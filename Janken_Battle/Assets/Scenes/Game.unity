@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 369923564}
   - component: {fileID: 369923566}
   - component: {fileID: 369923567}
+  - component: {fileID: 369923568}
   m_Layer: 5
   m_Name: PlayerCard_3
   m_TagString: Untagged
@@ -554,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &369923567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +568,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 369923568}
   dropZone: {fileID: 1741463017}
+--- !u!225 &369923568
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369923562}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &404049091
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +595,7 @@ GameObject:
   - component: {fileID: 404049093}
   - component: {fileID: 404049095}
   - component: {fileID: 404049096}
+  - component: {fileID: 404049097}
   m_Layer: 5
   m_Name: PlayerCard_9
   m_TagString: Untagged
@@ -657,7 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &404049096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,7 +685,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 404049097}
   dropZone: {fileID: 1741463017}
+--- !u!225 &404049097
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404049091}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &587191654
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +712,7 @@ GameObject:
   - component: {fileID: 587191656}
   - component: {fileID: 587191658}
   - component: {fileID: 587191659}
+  - component: {fileID: 587191660}
   m_Layer: 5
   m_Name: PlayerCard_2
   m_TagString: Untagged
@@ -760,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &587191659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +802,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 587191660}
   dropZone: {fileID: 1741463017}
+--- !u!225 &587191660
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587191654}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &607587701
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +829,7 @@ GameObject:
   - component: {fileID: 607587703}
   - component: {fileID: 607587706}
   - component: {fileID: 607587707}
+  - component: {fileID: 607587708}
   m_Layer: 5
   m_Name: PlayerCard
   m_TagString: Untagged
@@ -863,7 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &607587707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,7 +919,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 607587708}
   dropZone: {fileID: 1741463017}
+--- !u!225 &607587708
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607587701}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &647724901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1109,7 @@ GameObject:
   - component: {fileID: 758148296}
   - component: {fileID: 758148298}
   - component: {fileID: 758148299}
+  - component: {fileID: 758148300}
   m_Layer: 5
   m_Name: PlayerCard_1
   m_TagString: Untagged
@@ -1129,7 +1186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &758148299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,7 +1199,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 758148300}
   dropZone: {fileID: 1741463017}
+--- !u!225 &758148300
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758148294}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &987783611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1393,7 @@ GameObject:
   - component: {fileID: 1210641668}
   - component: {fileID: 1210641670}
   - component: {fileID: 1210641671}
+  - component: {fileID: 1210641672}
   m_Layer: 5
   m_Name: PlayerCard_5
   m_TagString: Untagged
@@ -1399,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &1210641671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,7 +1483,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 1210641672}
   dropZone: {fileID: 1741463017}
+--- !u!225 &1210641672
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210641666}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1275832916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,6 +1510,7 @@ GameObject:
   - component: {fileID: 1275832918}
   - component: {fileID: 1275832920}
   - component: {fileID: 1275832921}
+  - component: {fileID: 1275832922}
   m_Layer: 5
   m_Name: PlayerCard_8
   m_TagString: Untagged
@@ -1502,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &1275832921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,7 +1600,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 1275832922}
   dropZone: {fileID: 1741463017}
+--- !u!225 &1275832922
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275832916}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1446340599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,6 +1702,7 @@ GameObject:
   - component: {fileID: 1454580247}
   - component: {fileID: 1454580249}
   - component: {fileID: 1454580250}
+  - component: {fileID: 1454580251}
   m_Layer: 5
   m_Name: PlayerCard_7
   m_TagString: Untagged
@@ -1680,7 +1779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &1454580250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1693,7 +1792,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 1454580251}
   dropZone: {fileID: 1741463017}
+--- !u!225 &1454580251
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454580245}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1499506521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1819,7 @@ GameObject:
   - component: {fileID: 1499506523}
   - component: {fileID: 1499506525}
   - component: {fileID: 1499506526}
+  - component: {fileID: 1499506527}
   m_Layer: 5
   m_Name: PlayerCard_4
   m_TagString: Untagged
@@ -1783,7 +1896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &1499506526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,7 +1909,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 1499506527}
   dropZone: {fileID: 1741463017}
+--- !u!225 &1499506527
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499506521}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1701527041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,6 +2403,7 @@ GameObject:
   - component: {fileID: 2062140874}
   - component: {fileID: 2062140876}
   - component: {fileID: 2062140877}
+  - component: {fileID: 2062140878}
   m_Layer: 5
   m_Name: PlayerCard_6
   m_TagString: Untagged
@@ -2353,7 +2480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea947af8d95a4865b961e60f871649b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2094011482}
 --- !u!114 &2062140877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2366,7 +2493,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8fceb2fd6394dbb8a1908a8069f1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 2062140878}
   dropZone: {fileID: 1741463017}
+--- !u!225 &2062140878
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062140872}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!1 &2094011481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094011483}
+  - component: {fileID: 2094011482}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2094011482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094011481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7955bc9f01e4b60ae8f67e10ac743a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCardSelected: 0
+--- !u!4 &2094011483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094011481}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.166876, y: 489.93332, z: -8.579441}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2117634573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,3 +2663,4 @@ SceneRoots:
   - {fileID: 293053572}
   - {fileID: 2018502531}
   - {fileID: 2117634577}
+  - {fileID: 2094011483}

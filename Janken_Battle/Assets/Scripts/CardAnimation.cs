@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class CardAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [Header("カードの元の位置と親を保存するための変数")]
+    [Header("カードの元の位置を保存するための変数")]
     private int originalSiblingIndex;
     [Header("GameManagerの参照")]
     public GameManager gameManager;
