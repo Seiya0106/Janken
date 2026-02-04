@@ -5,6 +5,7 @@ public class BackButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandl
 , IPointerExitHandler
 {
     public GameObject creditPanel;
+    public GameObject settingPanel;
     public System.Action OnClick;
     [SerializeField] private CanvasGroup canvasGroup;
     public void OnPointerEnter(PointerEventData eventData)
@@ -27,5 +28,6 @@ public class BackButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandl
         canvasGroup.DOFade(1.0f, 0.24f).SetEase(Ease.OutCubic);
         SEManager.Instance.PlaySE("push");
         creditPanel.SetActive(false);
+        settingPanel.SetActive(false);
     }
 }
