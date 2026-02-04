@@ -17,11 +17,19 @@ public class FadeManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    /// <summary>
+    /// フェードインする関数
+    /// </summary>
+    /// <param name="duration"></param>
     public void FadeIn(float duration)
     {
         canvasGroup.alpha = 1;
         canvasGroup.DOFade(0, duration).SetEase(Ease.OutCubic);
     }
+    /// <summary>
+    /// フェードアウトする関数
+    /// </summary>
+    /// <param name="duration"></param>
     public void FadeOut(float duration)
     {
         canvasGroup.alpha = 0;

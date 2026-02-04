@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -5,11 +6,14 @@ using UnityEngine.UI;
 public class CardAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                             , IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("カードの元の位置と親を保存するための変数")]
     private int originalSiblingIndex;
-    private Transform cardTransform;
     private Vector2 prevPos;
     [SerializeField] private GameObject prevParent;
+    [Header("ドロップ先の座標")]
     public RectTransform dropZone;
+    [Header("GameManagerの参照")]
+    public GameManager gameManager;
     void Start()
     {
         // 元のインデックスを保存

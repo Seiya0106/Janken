@@ -14,6 +14,10 @@ public class BGMManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    /// <summary>
+    /// BGMを再生する関数
+    /// </summary>
+    /// <param name="bgmName"></param>
     public void PlayBGM(string bgmName)
     {
         
