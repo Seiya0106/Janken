@@ -18,5 +18,6 @@ public class CardData : ScriptableObject
     }
     public CardType cardType;
     public SpecialEffect specialEffect;
+    public Sprite cardSprite;
     public int power;
 }

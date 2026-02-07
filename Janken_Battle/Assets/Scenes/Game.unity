@@ -3312,7 +3312,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7955bc9f01e4b60ae8f67e10ac743a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCardSelected: 0
+  opponentCardImages:
+  - {fileID: 1174741605}
+  - {fileID: 647724903}
+  - {fileID: 1910694192}
+  - {fileID: 1701527043}
+  - {fileID: 1841412084}
+  - {fileID: 278460107}
+  - {fileID: 1844395614}
+  - {fileID: 106028671}
+  - {fileID: 157192033}
+  - {fileID: 1446340601}
+  opponentCardDatas:
+  - {fileID: 11400000, guid: c0e234cfdf9024a0390accd58aff0b79, type: 2}
+  - {fileID: 11400000, guid: fdae42ad453c6485a9e4944211301ac9, type: 2}
+  - {fileID: 11400000, guid: 1be6e402bc2194e9d813c368683e82ec, type: 2}
+  - {fileID: 11400000, guid: c9eb1bdd3efa44a07a7688d756c9ea85, type: 2}
+  - {fileID: 11400000, guid: a9e8cde05d28944658cc3aaca1d80c82, type: 2}
+  - {fileID: 11400000, guid: 59f4d6fd889bf40fca166bb2914732e5, type: 2}
+  - {fileID: 11400000, guid: 4beb718fa5a8a4420b21c1f61109e1d2, type: 2}
+  - {fileID: 11400000, guid: 8c289850be65148ccb17a59732b11e99, type: 2}
+  - {fileID: 11400000, guid: cc2ebc8c2b85b4ddcaed1ddeec5739cb, type: 2}
+  - {fileID: 11400000, guid: ed4638199f0014ffcb0c056dd8a60ccd, type: 2}
+  opponentCard: {fileID: 670925359}
 --- !u!4 &2094011483
 Transform:
   m_ObjectHideFlags: 0

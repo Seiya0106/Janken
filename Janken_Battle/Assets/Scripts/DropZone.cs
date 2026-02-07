@@ -19,6 +19,7 @@ public class DropZone : MonoBehaviour, IDropHandler
                 
                 // ドロップ成功フラグを設定
                 cardDragHandler.SetDroppedInZone(true);
+                GameManager.Instance.SetCard();
             }
         }
         else
