@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using System;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     public Image opponentCard;
     private int enemyIndex = 0;
     private int index = 0;
+    [Header("プレイヤーのカードデータ")]
+    private CardData playerCard;
     void Awake()
     {
         if (Instance == null)
@@ -63,8 +66,27 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     private async UniTask GameProgress(CancellationToken token)
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(3), cancellationToken: token);
+        await UniTask.Delay(TimeSpan.FromSeconds(1), cancellationToken: token);
         // ここに勝敗判定の処理を追加する予定
+        playerCard = DropZone.Instance.SetPlayerCard();
+        if (playerCard.cardType == CardData.CardType.Rock && opponentCardDatas[enemyIndex].cardType == CardData.CardType.Scissors ||
+            playerCard.cardType == CardData.CardType.Scissors && opponentCardDatas[enemyIndex].cardType == CardData.CardType.Paper ||
+            playerCard.cardType == CardData.CardType.Paper && opponentCardDatas[enemyIndex].cardType == CardData.CardType.Rock)
+        {
+            Debug.Log("プレイヤーの勝ち");
+        }
+        else if (playerCard.cardType == CardData.CardType.Barrier || opponentCardDatas[enemyIndex].cardType == CardData.CardType.Barrier)
+        {
+            Debug.Log("バリアが出たので無効試合");
+        }
+        else if (playerCard.cardType == opponentCardDatas[enemyIndex].cardType)
+        {
+            Debug.Log("引き分け");
+        }
+        else
+        {
+            Debug.Log("相手の勝ち");
+        }
         Debug.Log("ゲーム終了");
         if (index < opponentCardImages.Count)
         {

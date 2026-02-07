@@ -1,13 +1,28 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler
 {
+    public static DropZone Instance { get; private set; }
+    private CardData playerCard;
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void OnDrop(PointerEventData eventData)
     {
         SEManager.Instance.PlaySE("put");
         GameObject droppedObject = eventData.pointerDrag;
-        Debug.Log(droppedObject.GetComponent<CardDragHandler>().cardData.cardType);
+        playerCard = droppedObject.GetComponent<CardDragHandler>().cardData;
+        Debug.Log(playerCard.cardType);
         if (droppedObject != null)
         {
             CardDragHandler cardDragHandler = droppedObject.GetComponent<CardDragHandler>();
@@ -26,5 +41,9 @@ public class DropZone : MonoBehaviour, IDropHandler
         {
             Debug.Log("Dropped object is null");
         }
+    }
+    public CardData SetPlayerCard()
+    {
+        return playerCard;
     }
 }
