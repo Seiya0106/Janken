@@ -2,24 +2,15 @@ using UnityEngine;
 
 public class BGMManager : MonoBehaviour
 {
-    public static BGMManager Instance { get; private set; }
-    private void Awake()
+    [SerializeField] private AudioSource audioSource;
+    [Header("BGMの音源")]
+    public AudioClip mainBGM;
+    void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    /// <summary>
-    /// BGMを再生する関数
-    /// </summary>
-    /// <param name="bgmName"></param>
-    public void PlayBGM(string bgmName)
-    {
-        
+        DontDestroyOnLoad(this);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 0.5f;
+        audioSource.clip = mainBGM;
+        audioSource.Play();
     }
 }

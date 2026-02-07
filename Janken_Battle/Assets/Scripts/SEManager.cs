@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SEManager : MonoBehaviour
 {
+    [Header("Singleton Instance")]
     public static SEManager Instance { get; private set; }
     [Header("SEの音源")]
     public AudioClip pushSE;
@@ -11,7 +12,9 @@ public class SEManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     void Start()
     {
+        DontDestroyOnLoad(this);
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 0.5f;
     }
     private void Awake()
     {

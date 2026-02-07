@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler
 , IPointerExitHandler
 {
-    public System.Action OnClick;
+    public Action OnClick;
     [SerializeField] private GameObject fadeManager;
     [SerializeField] private CanvasGroup canvasGroup;
     private CancellationTokenSource cts;

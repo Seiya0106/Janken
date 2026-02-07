@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardType: 3
   specialEffect: 0
+  cardSprite: {fileID: 8790154677910664958, guid: b78a23058417d497293439c28a56cd5d, type: 3}
   power: 0
