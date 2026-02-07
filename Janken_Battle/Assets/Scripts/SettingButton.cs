@@ -12,6 +12,7 @@ public class SettingButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
     {
         OnClick?.Invoke();
         transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        SEManager.Instance.PlaySE("hover");
     }
     public void OnPointerExit(PointerEventData eventData)
     {

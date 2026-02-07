@@ -10,6 +10,7 @@ public class CardAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         // カードを拡大
         transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+        SEManager.Instance.PlaySE("hover");
     }
     public void OnPointerExit(PointerEventData eventData)
     {

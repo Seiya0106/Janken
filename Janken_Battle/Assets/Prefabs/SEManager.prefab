@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushSE: {fileID: 8300000, guid: 44e659536d29c4242b396d27c3ee6aa0, type: 3}
+  hoverSE: {fileID: 8300000, guid: 0cf8cd2841213461f9fcd0de25769ba5, type: 3}
+  putSE: {fileID: 8300000, guid: 9ae75970e8e344dc998e2cdaec1e8498, type: 3}
   audioSource: {fileID: 1447142216791110136}
 --- !u!82 &1447142216791110136
 AudioSource:
@@ -60,7 +62,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

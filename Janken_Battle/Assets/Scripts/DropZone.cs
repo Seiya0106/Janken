@@ -6,6 +6,7 @@ public class DropZone : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop");
+        SEManager.Instance.PlaySE("put");
         GameObject droppedObject = eventData.pointerDrag;
         if (droppedObject != null)
         {

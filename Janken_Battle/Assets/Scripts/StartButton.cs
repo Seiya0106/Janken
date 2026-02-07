@@ -21,6 +21,7 @@ public class StartButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHand
     {
         OnClick?.Invoke();
         transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        SEManager.Instance.PlaySE("hover");
     }
     public void OnPointerExit(PointerEventData eventData)
     {
