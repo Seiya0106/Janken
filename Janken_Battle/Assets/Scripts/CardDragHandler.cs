@@ -5,19 +5,36 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
     [Header("ドラッグ前の位置と親を保存するための変数")]
     private Vector2 prevPos;
-    private GameObject prevParent;
+    private Transform prevParent;
+    private int prevSiblingIndex;
     [Header("ドラッグ時のalphaを変えるためのCanvasGroup")]
     public CanvasGroup canvasGroup;
     [Header("ドロップ先のDropZone")]
     public RectTransform dropZone;
+    [Header("CardAnimationの参照")]
+    private CardAnimation CardAnimation;
+    [Header("ドロップが成功したかのフラグ")]
+    private bool droppedInZone = false;
+    void Awake()
+    {
+        CardAnimation = GetComponent<CardAnimation>();
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // 元の位置と親を保存
+        // 元の位置と親とインデックスを保存
         prevPos = transform.position;
-        prevParent = transform.parent.gameObject;
+        prevParent = transform.parent;
+        prevSiblingIndex = transform.GetSiblingIndex();
 
         // ドラッグ開始時にカードの大きさを元に戻す
         transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+        droppedInZone = false;
+        canvasGroup.blocksRaycasts = false; // ドラッグ中にRaycastを無効化
+        if (CardAnimation != null)
+        {
+            CardAnimation.enabled = false; // カードアニメーションを無効化
+        }
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -27,19 +44,27 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1.0f;
-        Vector2 dropZonePos = dropZone.InverseTransformPoint(eventData.position);
-        if (dropZone.rect.Contains(dropZonePos))
+        
+        // レイキャストを元に戻す
+        canvasGroup.blocksRaycasts = true;
+        
+        // DropZoneで処理されなかった場合は元の位置に戻す
+        if (!droppedInZone)
         {
-            CardAnimation cardAnimation = GetComponent<CardAnimation>();
-            cardAnimation.enabled = false; // カードアニメーションを無効化
-            transform.SetParent(dropZone);
-            GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        }
-        // ドロップ先がない場合、元の位置に戻す
-        else
-        {
-            transform.SetParent(prevParent.transform);
+            transform.SetParent(prevParent);
+            transform.SetSiblingIndex(prevSiblingIndex);
             transform.position = prevPos;
+            
+            // アニメーションを再有効化
+            if (CardAnimation != null)
+            {
+                CardAnimation.enabled = true;
+            }
         }
+    }
+
+    public void SetDroppedInZone(bool value)
+    {
+        droppedInZone = value;
     }
 }
