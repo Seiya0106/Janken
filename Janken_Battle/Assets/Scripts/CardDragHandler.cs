@@ -15,6 +15,7 @@ public class CardDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private CardAnimation CardAnimation;
     [Header("ドロップが成功したかのフラグ")]
     private bool droppedInZone = false;
+    public CardData cardData;
     void Awake()
     {
         CardAnimation = GetComponent<CardAnimation>();

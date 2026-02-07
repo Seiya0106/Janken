@@ -8,7 +8,8 @@ public class CardData : ScriptableObject
     {
         Rock,
         Paper,
-        Scissors
+        Scissors,
+        Barrier
     }
     public enum SpecialEffect
     {
