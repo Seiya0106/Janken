@@ -8,6 +8,9 @@ public class SEManager : MonoBehaviour
     public AudioClip pushSE;
     public AudioClip hoverSE;
     public AudioClip putSE;
+    public AudioClip winSE;
+    public AudioClip drawSE;
+    public AudioClip loseSE;
     [Header("AudioSource")]
     [SerializeField] private AudioSource audioSource;
     void Start()
@@ -36,17 +39,27 @@ public class SEManager : MonoBehaviour
         if (seName == "push")
         {
             audioSource.clip = pushSE;
-            audioSource.Play();
         }
         else if (seName == "hover")
         {
             audioSource.clip = hoverSE;
-            audioSource.Play();
         }
         else if (seName == "put")
         {
             audioSource.clip = putSE;
-            audioSource.Play();
         }
+        else if (seName == "win")
+        {
+            audioSource.clip = winSE;
+        }
+        else if (seName == "draw")
+        {
+            audioSource.clip = drawSE;
+        }
+        else if (seName == "lose")
+        {
+            audioSource.clip = loseSE;
+        }
+        audioSource.Play();
     }
 }

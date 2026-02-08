@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI enemyLifeText;
     private int playerLife = 3;
     private int enemyLife = 3;
+    [Header("結果表示用テキスト")]
+    public TextMeshProUGUI resultText;
     void Awake()
     {
         if (Instance == null)
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        resultText.text = "";
         isCardSeted = false;
         playerLifeText.text = "×" + playerLife.ToString();
         enemyLifeText.text = "×" + enemyLife.ToString();
@@ -111,9 +114,24 @@ public class GameManager : MonoBehaviour
         isGameInProgress = false;
         playerLifeText.text = "×" + playerLife.ToString();
         enemyLifeText.text = "×" + enemyLife.ToString();
-        if (playerLife <= 0 || enemyLife <= 0)
+        if (playerLife <= 0 || enemyLife <= 0 || index >= opponentCardImages.Count)
         {
             Debug.Log("ゲーム終了");
+            if (playerLife > enemyLife)
+            {
+                resultText.text = "You Win!";
+                SEManager.Instance.PlaySE("win");
+            }
+            else if (playerLife < enemyLife)
+            {
+                resultText.text = "You Lose...";
+                SEManager.Instance.PlaySE("lose");
+            }
+            else
+            {
+                resultText.text = "Draw";
+                SEManager.Instance.PlaySE("draw");
+            }
             FadeManager.Instance.LoadTitle().Forget();
         }
     }

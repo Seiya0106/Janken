@@ -48,6 +48,9 @@ MonoBehaviour:
   pushSE: {fileID: 8300000, guid: 44e659536d29c4242b396d27c3ee6aa0, type: 3}
   hoverSE: {fileID: 8300000, guid: 0cf8cd2841213461f9fcd0de25769ba5, type: 3}
   putSE: {fileID: 8300000, guid: 9ae75970e8e344dc998e2cdaec1e8498, type: 3}
+  winSE: {fileID: 8300000, guid: d6d05d73290224422ab3ac0e10142430, type: 3}
+  drawSE: {fileID: 8300000, guid: 24ce697a7bbb348e58e58aad38377296, type: 3}
+  loseSE: {fileID: 8300000, guid: 9eba75202075b43a685a3728527b34ed, type: 3}
   audioSource: {fileID: 1447142216791110136}
 --- !u!82 &1447142216791110136
 AudioSource:

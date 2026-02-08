@@ -31,6 +31,7 @@ public class FadeManager : MonoBehaviour
     {
         canvasGroup.alpha = 1;
         canvasGroup.DOFade(0, duration).SetEase(Ease.OutCubic);
+        canvasGroup.blocksRaycasts = false;
     }
     /// <summary>
     /// フェードアウトする関数
@@ -40,6 +41,7 @@ public class FadeManager : MonoBehaviour
     {
         canvasGroup.alpha = 0;
         canvasGroup.DOFade(1, duration).SetEase(Ease.OutCubic);
+        canvasGroup.blocksRaycasts = true;
     }
     /// <summary>
     /// ゲームシーンをロードする関数
@@ -55,6 +57,7 @@ public class FadeManager : MonoBehaviour
     }
     public async UniTask LoadTitle()
     {
+        await UniTask.Delay(TimeSpan.FromSeconds(2), cancellationToken: cts.Token);
         FadeOut(3f);
         await UniTask.Delay(TimeSpan.FromSeconds(3), cancellationToken: cts.Token);
         SceneManager.LoadScene("Title");
