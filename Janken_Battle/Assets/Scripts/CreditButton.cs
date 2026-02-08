@@ -5,12 +5,10 @@ using UnityEngine.EventSystems;
 public class CreditButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler
 , IPointerExitHandler
 {
-    public System.Action OnClick;
     [SerializeField] private CanvasGroup canvasGroup;
     public GameObject creditPanel;
     public void OnPointerEnter(PointerEventData eventData)
     {
-        OnClick?.Invoke();
         transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
         SEManager.Instance.PlaySE("hover");
     }

@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler
 , IPointerExitHandler
 {
-    public Action OnClick;
     [SerializeField] private GameObject fadeManager;
     [SerializeField] private CanvasGroup canvasGroup;
     private CancellationTokenSource cts;
@@ -19,7 +18,6 @@ public class StartButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHand
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        OnClick?.Invoke();
         transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
         SEManager.Instance.PlaySE("hover");
     }

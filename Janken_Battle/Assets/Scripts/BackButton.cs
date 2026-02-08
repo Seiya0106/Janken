@@ -6,11 +6,9 @@ public class BackButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandl
 {
     public GameObject creditPanel;
     public GameObject settingPanel;
-    public System.Action OnClick;
     [SerializeField] private CanvasGroup canvasGroup;
     public void OnPointerEnter(PointerEventData eventData)
     {
-        OnClick?.Invoke();
         transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
     }
     public void OnPointerExit(PointerEventData eventData)
