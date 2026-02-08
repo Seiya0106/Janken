@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using System;
-using Unity.VisualScripting;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
     private int index = 0;
     [Header("プレイヤーのカードデータ")]
     private CardData playerCard;
+    [Header("ライフ")]
+    public TextMeshProUGUI playerLifeText;
+    public TextMeshProUGUI enemyLifeText;
+    private int playerLife = 3;
+    private int enemyLife = 3;
     void Awake()
     {
         if (Instance == null)
@@ -38,6 +43,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         isCardSeted = false;
+        playerLifeText.text = "×" + playerLife.ToString();
+        enemyLifeText.text = "×" + enemyLife.ToString();
         cts = new CancellationTokenSource();
     }
 
@@ -73,7 +80,11 @@ public class GameManager : MonoBehaviour
             playerCard.cardType == CardData.CardType.Scissors && opponentCardDatas[enemyIndex].cardType == CardData.CardType.Paper ||
             playerCard.cardType == CardData.CardType.Paper && opponentCardDatas[enemyIndex].cardType == CardData.CardType.Rock)
         {
-            Debug.Log("プレイヤーの勝ち");
+            enemyLife -= playerCard.power;
+            if (playerCard.specialEffect == CardData.SpecialEffect.Recover)
+            {
+                playerLife += 1;
+            }
         }
         else if (playerCard.cardType == CardData.CardType.Barrier || opponentCardDatas[enemyIndex].cardType == CardData.CardType.Barrier)
         {
@@ -86,13 +97,25 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("相手の勝ち");
+            playerLife -= opponentCardDatas[enemyIndex].power;
+            if (opponentCardDatas[enemyIndex].specialEffect == CardData.SpecialEffect.Recover)
+            {
+                enemyLife += 1;
+            }
         }
-        Debug.Log("ゲーム終了");
+        Debug.Log(playerLife + " / " + enemyLife);
         if (index < opponentCardImages.Count)
         {
             index++;
         }
         isGameInProgress = false;
+        playerLifeText.text = "×" + playerLife.ToString();
+        enemyLifeText.text = "×" + enemyLife.ToString();
+        if (playerLife <= 0 || enemyLife <= 0)
+        {
+            Debug.Log("ゲーム終了");
+            FadeManager.Instance.LoadTitle().Forget();
+        }
     }
     private void OnDestroy()
     {

@@ -8,6 +8,14 @@ public class AudioVolumeChanger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (volumeSlider.name == "BGM")
+        {
+            audioSource = BGMManager.Instance.GetComponent<AudioSource>();
+        }
+        else if (volumeSlider.name == "SE")
+        {
+            audioSource = SEManager.Instance.GetComponent<AudioSource>();
+        }
         volumeSlider.value = audioSource.volume;
     }
 

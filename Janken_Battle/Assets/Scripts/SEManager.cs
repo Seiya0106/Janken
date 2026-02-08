@@ -12,7 +12,7 @@ public class SEManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     void Start()
     {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0.5f;
     }
