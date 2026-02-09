@@ -88,22 +88,38 @@ public class GameManager : MonoBehaviour
             {
                 playerLife += 1;
             }
+            
+            if (playerCard.power == 1)
+            {
+                SEManager.Instance.PlaySE("lightAttack");
+            }
+            else if (playerCard.power == 2)
+            {
+                SEManager.Instance.PlaySE("heavyAttack");
+            }
         }
         else if (playerCard.cardType == CardData.CardType.Barrier || opponentCardDatas[enemyIndex].cardType == CardData.CardType.Barrier)
         {
-            Debug.Log("バリアが出たので無効試合");
+            SEManager.Instance.PlaySE("guard");
         }
         else if (playerCard.cardType == opponentCardDatas[enemyIndex].cardType)
         {
-            Debug.Log("引き分け");
+            SEManager.Instance.PlaySE("guard");
         }
         else
         {
-            Debug.Log("相手の勝ち");
             playerLife -= opponentCardDatas[enemyIndex].power;
             if (opponentCardDatas[enemyIndex].specialEffect == CardData.SpecialEffect.Recover)
             {
                 enemyLife += 1;
+            }
+            if (opponentCardDatas[enemyIndex].power == 1)
+            {
+                SEManager.Instance.PlaySE("lightAttack");
+            }
+            else if (opponentCardDatas[enemyIndex].power == 2)
+            {
+                SEManager.Instance.PlaySE("heavyAttack");
             }
         }
         Debug.Log(playerLife + " / " + enemyLife);

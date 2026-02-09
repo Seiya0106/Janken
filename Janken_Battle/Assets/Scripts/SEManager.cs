@@ -8,6 +8,9 @@ public class SEManager : MonoBehaviour
     public AudioClip pushSE;
     public AudioClip hoverSE;
     public AudioClip putSE;
+    public AudioClip lightAttackSE;
+    public AudioClip heavyAttackSE;
+    public AudioClip guardSE;
     public AudioClip winSE;
     public AudioClip drawSE;
     public AudioClip loseSE;
@@ -47,6 +50,18 @@ public class SEManager : MonoBehaviour
         else if (seName == "put")
         {
             audioSource.clip = putSE;
+        }
+        else if (seName == "lightAttack")
+        {
+            audioSource.clip = lightAttackSE;
+        }
+        else if (seName == "heavyAttack")
+        {
+            audioSource.clip = heavyAttackSE;
+        }
+        else if (seName == "guard")
+        {
+            audioSource.clip = guardSE;
         }
         else if (seName == "win")
         {
