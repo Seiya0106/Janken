@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b46044838309489a8eff40de20ca5f4, type: 3}
+  m_Name: Rock 2
+  m_EditorClassIdentifier: 
+  cardType: 0
+  specialEffect: 0
+  cardSprite: {fileID: 8476764939301271271, guid: 13eaa1a96b6af424eade9fd00f95b905, type: 3}
+  power: 2
